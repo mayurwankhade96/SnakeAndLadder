@@ -23,7 +23,10 @@ namespace SnakeAndLadder
                 {
                     case IS_LADDER:
                         Console.WriteLine("Player gets ladder");
-                        startPosition += dieRoller;
+                        if (startPosition + dieRoller <= 100)
+                            startPosition += dieRoller;
+                        else
+                            startPosition = startPosition + 0;
                         break;
 
                     case IS_SNAKE:
