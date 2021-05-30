@@ -9,7 +9,10 @@ namespace SnakeAndLadder
         public int startPosition = 0;
         public void SnakeLadder()
         {
-            Console.WriteLine("Start position of player is : " + startPosition);
+            Random die = new Random();
+            int dieRoller = die.Next(1, 7);
+
+            Console.WriteLine("Player rolls the die and get : " + dieRoller);
         }
     }
 }
