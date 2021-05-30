@@ -9,6 +9,7 @@ namespace SnakeAndLadder
         public int startPosition = 0;
         const int IS_LADDER = 1;
         const int IS_SNAKE = 2;
+        public int dieRollingNumber = 0;
         public void SnakeLadder()
         {
             Random die = new Random();
@@ -41,7 +42,9 @@ namespace SnakeAndLadder
                         break;
                 }
                 Console.WriteLine("Current position : " + startPosition);
+                dieRollingNumber += 1;                
             }
+            Console.WriteLine("Die rolling number : " + dieRollingNumber);
             Console.WriteLine("Winning position : " + startPosition);
         }
     }
